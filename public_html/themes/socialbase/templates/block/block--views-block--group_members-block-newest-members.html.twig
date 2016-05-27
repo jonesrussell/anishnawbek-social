@@ -29,11 +29,11 @@
  * @ingroup themeable
  */
 #}
-<div class="card card-with-actionbar">
+<div class="card-with-actionbar">
     <div class="card-head">
         <header class="text-center">   {{ title_prefix }} {{ label }} {{ title_suffix }} </header>
         <div class="subtitle text-center">
-            {% trans %}in the community{% endtrans %}
+            {% trans %}in the group{% endtrans %}
         </div>
     </div>
     <div class="card-body">
@@ -41,9 +41,9 @@
             {{ content }}
         </div>
         <div class="card-actionbar text-center">
-            <a href="community-events" class="btn btn-flat">
+            <a href="/group/{{ group_id }}/members" class="btn btn-flat">
                 {% trans %}
-                    View all
+                See all
                 {% endtrans %}
             </a>
         </div>
