@@ -152,7 +152,7 @@ class ActivityNotifications extends ControllerBase {
     $uid = $account->id();
 
     $entity_query = \Drupal::entityQuery('activity');
-    $entity_query->condition('field_activity_recipient_user', $uid, '=');
+    $entity_query->condition('field_activity_recipient_target', $uid, '=');
     $entity_query->condition('field_activity_destinations', $destinations, 'IN');
 
     if ($entity !== NULL) {

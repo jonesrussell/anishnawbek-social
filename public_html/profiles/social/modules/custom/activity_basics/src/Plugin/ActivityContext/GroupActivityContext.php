@@ -7,6 +7,7 @@
 
 namespace Drupal\activity_basics\Plugin\ActivityContext;
 
+use Drupal\activity_basics\Recipient\GroupRecipient;
 use Drupal\activity_creator\Plugin\ActivityContextBase;
 use Drupal\group\Entity\GroupContent;
 use Drupal\social_group\SocialGroupHelperService;
@@ -34,10 +35,7 @@ class GroupActivityContext extends ActivityContextBase {
       $referenced_entity = $data['related_object']['0'];
 
       if ($gid = SocialGroupHelperService::getGroupFromEntity($referenced_entity)) {
-        $recipients[] = [
-          'target_type' => 'group',
-          'target_id' => $gid,
-        ];
+        $recipients[] = new GroupRecipient($gid);
       }
     }
 

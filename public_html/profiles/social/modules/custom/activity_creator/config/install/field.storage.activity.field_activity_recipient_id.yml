@@ -1,16 +1,12 @@
-uuid: 0405bef1-bd38-4f28-8361-ceeb23d2fc00
 langcode: en
 status: true
 dependencies:
   module:
     - activity_creator
-    - user
-id: activity.field_activity_recipient_user
-field_name: field_activity_recipient_user
+id: activity.field_activity_recipient_id
+field_name: field_activity_recipient_id
 entity_type: activity
-type: entity_reference
-settings:
-  target_type: user
+type: string
 module: core
 locked: false
 cardinality: 1

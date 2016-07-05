@@ -3,12 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.activity.field_activity_recipient_group
+    - field.storage.activity.field_activity_recipient_id
     - group.type.open_group
   module:
     - activity_creator
-id: activity.activity.field_activity_recipient_group
-field_name: field_activity_recipient_group
+id: activity.activity.field_activity_recipient_id
+field_name: field_activity_recipient_id
 entity_type: activity
 bundle: activity
 label: 'Recipient group'

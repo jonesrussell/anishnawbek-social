@@ -232,10 +232,10 @@ display:
           plugin_id: text
       relationships: {  }
       arguments:
-        field_activity_recipient_user_target_id:
-          id: field_activity_recipient_user_target_id
-          table: activity__field_activity_recipient_user
-          field: field_activity_recipient_user_target_id
+        field_activity_recipient_target_target_id:
+          id: field_activity_recipient_target_target_id
+          table: activity__field_activity_recipient_target
+          field: field_activity_recipient_target_target_id
           relationship: none
           group_type: group
           admin_label: ''

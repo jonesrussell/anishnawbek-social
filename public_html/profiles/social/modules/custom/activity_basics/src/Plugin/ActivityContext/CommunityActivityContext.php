@@ -7,6 +7,7 @@
 
 namespace Drupal\activity_basics\Plugin\ActivityContext;
 
+use Drupal\activity_basics\Recipient\CommunityRecipient;
 use Drupal\activity_creator\Plugin\ActivityContextBase;
 use Drupal\group\Entity\GroupContent;
 
@@ -24,9 +25,9 @@ class CommunityActivityContext extends ActivityContextBase {
    * {@inheritdoc}
    */
   public function getRecipients(array $data, $last_uid, $limit) {
-    // Always return empty array here. Since community does not have specific
-    // recipients.
-    return [];
+    $recipients = array();
+    $recipients[] = new CommunityRecipient();
+    return $recipients;
   }
 
   public function isValidEntity($entity) {

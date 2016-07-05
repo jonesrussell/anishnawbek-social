@@ -51,8 +51,8 @@ class ActivityFactory extends ControllerBase {
       'field_activity_entity' => $this->getFieldEntity($data),
       'field_activity_message' => $this->getFieldMessage($data),
       'field_activity_output_text' => $this->getFieldOutputText($message),
-      'field_activity_recipient_group' => $this->getFieldRecipientGroup($data),
-      'field_activity_recipient_user' => $this->getFieldRecipientUser($data),
+      'field_activity_recipient_id' => $this->getFieldRecipientId($data),
+      'field_activity_recipient_target' => $this->getFieldRecipientTarget($data),
     // Default status.
       'field_activity_status' => ACTIVITY_STATUS_RECEIVED,
       'user_id' => $this->getActor($data),
@@ -134,13 +134,10 @@ class ActivityFactory extends ControllerBase {
   /**
    * Get field value for 'recipient_group' field from data array.
    */
-  private function getFieldRecipientGroup($data) {
+  private function getFieldRecipientId($data) {
     $value = NULL;
     if (isset($data['recipient'])) {
-      if ($data['recipient']['target_type'] === 'group') {
-        // Should be in an array for the field.
-        $value = array($data['recipient']);
-      }
+      return $data['recipient']->id();
     }
     return $value;
   }
@@ -148,13 +145,10 @@ class ActivityFactory extends ControllerBase {
   /**
    * Get field value for 'recipient_user' field from data array.
    */
-  private function getFieldRecipientUser($data) {
+  private function getFieldRecipientTarget($data) {
     $value = NULL;
-    if (isset($data['recipient']) && is_array($data['recipient'])) {
-      if ($data['recipient']['target_type'] === 'user') {
-        // Should be in an array for the field.
-        $value = array($data['recipient']);
-      }
+    if (isset($data['recipient'])) {
+      return $data['recipient']->getTargetId();
     }
     return $value;
   }

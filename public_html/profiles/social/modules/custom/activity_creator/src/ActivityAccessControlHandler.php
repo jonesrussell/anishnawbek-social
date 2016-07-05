@@ -73,12 +73,12 @@ class ActivityAccessControlHandler extends EntityAccessControlHandler {
    */
   protected function getRecipientFromActivity(EntityInterface $entity) {
     $value = NULL;
-    $recipient_user = $entity->get('field_activity_recipient_user')->getValue();
+    $recipient_user = $entity->get('field_activity_recipient_target')->getValue();
     if (!empty($recipient_user)) {
       $recipient_user['0']['target_type'] = 'user';
       return $recipient_user;
     }
-    $recipient_group = $entity->get('field_activity_recipient_group')->getValue();
+    $recipient_group = $entity->get('field_activity_recipient_id')->getValue();
     if (!empty($recipient_group)) {
       $recipient_group['0']['target_type'] = 'group';
       return $recipient_group;

@@ -26,14 +26,20 @@ class ActivityGroupArgument extends ArgumentPluginBase {
     $this->ensureMyTable();
 
     // \Drupal\views\Plugin\views\query\QueryPluginBase.
-    $this->query->addTable('activity__field_activity_recipient_group');
+    $this->query->addTable('activity__field_activity_recipient_id');
+    $this->query->addTable('activity__field_activity_recipient_target');
     $this->query->addTable('activity__field_activity_entity');
     $this->query->addTable('activity__field_activity_destinations');
 
     $or_condition = db_or();
 
+    $reciepient_group = db_and();
+
     // Group is a recipient.
-    $or_condition->condition('activity__field_activity_recipient_group.field_activity_recipient_group_target_id', $this->argument, '=');
+    $reciepient_group->condition('activity__field_activity_recipient_id.field_activity_recipient_id_target_id', 'group_recipient', '=');
+    $reciepient_group->condition('activity__field_activity_recipient_target.field_activity_recipient_target_target_id', $this->argument, '=');
+
+    $or_condition->condition($reciepient_group);
 
     $this->query->addWhere('activity_group_argument', $or_condition);
 

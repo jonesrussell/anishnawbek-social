@@ -7,8 +7,8 @@ dependencies:
     - field.field.activity.activity.field_activity_entity
     - field.field.activity.activity.field_activity_message
     - field.field.activity.activity.field_activity_output_text
-    - field.field.activity.activity.field_activity_recipient_group
-    - field.field.activity.activity.field_activity_recipient_user
+    - field.field.activity.activity.field_activity_recipient_id
+    - field.field.activity.activity.field_activity_recipient_target
     - field.field.activity.activity.field_activity_status
   module:
     - activity_creator
@@ -47,7 +47,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
-  field_activity_recipient_group:
+  field_activity_recipient_id:
     weight: 13
     settings:
       match_operator: CONTAINS
@@ -55,7 +55,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
-  field_activity_recipient_user:
+  field_activity_recipient_target:
     weight: 12
     settings:
       match_operator: CONTAINS

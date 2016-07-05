@@ -7,6 +7,7 @@
 
 namespace Drupal\activity_basics\Plugin\ActivityContext;
 
+use Drupal\activity_basics\Recipient\AccountRecipient;
 use Drupal\activity_creator\Plugin\ActivityContextBase;
 use Drupal\group\Entity\GroupContent;
 use Drupal\social_post\Entity\Post;
@@ -36,12 +37,10 @@ class ProfileActivityContext extends ActivityContextBase {
 
         $recipient_user = $post->get('field_recipient_user')->getValue();
         if (!empty($recipient_user)) {
-          $recipients[] = [
-            'target_type' => 'user',
-            'target_id' => $recipient_user['0']['target_id'],
-          ];
+          $recipients[] = new AccountRecipient($recipient_user['0']['target_id']);
         }
       }
+      // TODO: add a default here for other entities so it works for more than posts.
     }
 
     return $recipients;

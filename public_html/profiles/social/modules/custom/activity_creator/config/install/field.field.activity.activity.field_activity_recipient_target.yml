@@ -3,11 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.activity.field_activity_recipient_user
+    - field.storage.activity.field_activity_recipient_target
   module:
     - activity_creator
-id: activity.activity.field_activity_recipient_user
-field_name: field_activity_recipient_user
+id: activity.activity.field_activity_recipient_target
+field_name: field_activity_recipient_target
 entity_type: activity
 bundle: activity
 label: 'Recipient user'
