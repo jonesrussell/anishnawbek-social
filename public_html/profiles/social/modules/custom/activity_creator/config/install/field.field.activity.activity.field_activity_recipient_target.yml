@@ -1,29 +1,23 @@
-uuid: 3ebadc47-34a8-4397-9afc-03f2e20ec43f
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.activity.field_activity_recipient_target
+    - field.storage.activity.field_recipient_target
   module:
     - activity_creator
-id: activity.activity.field_activity_recipient_target
-field_name: field_activity_recipient_target
+id: activity.activity.field_recipient_target
+field_name: field_recipient_target
 entity_type: activity
 bundle: activity
-label: 'Recipient user'
+label: 'Recipient target'
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:user'
-  handler_settings:
-    include_anonymous: true
-    filter:
-      type: _none
-    target_bundles: null
-    sort:
-      field: _none
-    auto_create: false
-field_type: entity_reference
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -3,10 +3,14 @@ status: true
 dependencies:
   module:
     - activity_creator
-id: activity.field_activity_recipient_id
-field_name: field_activity_recipient_id
+id: activity.field_recipient_id
+field_name: field_recipient_id
 entity_type: activity
 type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
 module: core
 locked: false
 cardinality: 1

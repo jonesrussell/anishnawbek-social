@@ -3,10 +3,13 @@ status: true
 dependencies:
   module:
     - activity_creator
-id: activity.field_activity_recipient_target
-field_name: field_activity_recipient_target
+id: activity.field_recipient_target
+field_name: field_recipient_target
 entity_type: activity
 type: integer
+settings:
+  unsigned: false
+  size: normal
 module: core
 locked: false
 cardinality: 1
