@@ -1,0 +1,5 @@
+name: Stats
+description: 'Statistics module.'
+type: module
+core: 8.x
+package: Social
