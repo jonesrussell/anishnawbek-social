@@ -3,6 +3,11 @@
 test-results/
 dev-scripts/local
 
+public_html/
+
+!public_html/profiles/social/
+!public_html/sites/
+
 public_html/sites/*/settings*.php
 public_html/sites/*/services*.yml
 public_html/sites/*/files
