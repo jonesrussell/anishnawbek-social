@@ -5,10 +5,12 @@ services:
     build: docker_build/drupal8/travis
     volumes:
      - ./html:/var/www/html
+     - ./vendor:/var/www/vendor
+     - ./composer.json:/var/www/composer.json
+     - ./composer.lock:/var/www/composer.lock
      - ./dev-scripts/:/root/dev-scripts
      - ./docker_build/drupal8/travis/:/root/travis
      - ./test-results/:/root/test-results
-     - ./vendor:/var/www/vendor
     environment:
      - DRUPAL_SETTINGS=travis
     network_mode: "bridge"
@@ -18,8 +20,10 @@ services:
     image: goalgorilla/drupal_social
     volumes:
      - ./html:/var/www/html
-     - ./dev-scripts/:/root/dev-scripts
      - ./vendor:/var/www/vendor
+     - ./composer.json:/var/www/composer.json
+     - ./composer.lock:/var/www/composer.lock
+     - ./dev-scripts/:/root/dev-scripts
     links:
      - db:db
     environment:
@@ -58,11 +62,13 @@ services:
     build: docker_build/drupal8/travis
     volumes:
      - ./html/:/var/www/html
+     - ./vendor:/var/www/vendor
+     - ./composer.json:/var/www/composer.json
+     - ./composer.lock:/var/www/composer.lock
      - ./dev-scripts/:/root/dev-scripts
      - ./travis_artifacts/:/root/travis_artifacts
      - ./html/profiles/contrib/social/tests/behat/:/root/behat
      - ./docker_build/drupal8/travis/:/root/travis
-     - ./vendor:/var/www/vendor
     links:
      - web:web
      - db:db
