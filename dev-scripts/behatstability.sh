@@ -6,4 +6,17 @@ PROJECT_FOLDER=/var/www/html/profiles/contrib/social/tests/behat
 
 echo $PROJECT_FOLDER/config/behat.yml;
 
-/var/www/vendor/bin/behat $PROJECT_FOLDER --config $PROJECT_FOLDER/config/behat.yml --tags "stability"
+/var/www/vendor/bin/behat $PROJECT_FOLDER --config $PROJECT_FOLDER/config/behat.yml --tags "stability&&DS-816"
+/var/www/vendor/bin/behat $PROJECT_FOLDER --config $PROJECT_FOLDER/config/behat.yml --tags "stability&&DS-816"
+/var/www/vendor/bin/behat $PROJECT_FOLDER --config $PROJECT_FOLDER/config/behat.yml --tags "stability&&DS-816"
+/var/www/vendor/bin/behat $PROJECT_FOLDER --config $PROJECT_FOLDER/config/behat.yml --tags "stability&&DS-816"
+/var/www/vendor/bin/behat $PROJECT_FOLDER --config $PROJECT_FOLDER/config/behat.yml --tags "stability&&DS-816"
+/var/www/vendor/bin/behat $PROJECT_FOLDER --config $PROJECT_FOLDER/config/behat.yml --tags "stability&&DS-816"
+/var/www/vendor/bin/behat $PROJECT_FOLDER --config $PROJECT_FOLDER/config/behat.yml --tags "stability&&DS-816"
+/var/www/vendor/bin/behat $PROJECT_FOLDER --config $PROJECT_FOLDER/config/behat.yml --tags "stability&&DS-816"
+/var/www/vendor/bin/behat $PROJECT_FOLDER --config $PROJECT_FOLDER/config/behat.yml --tags "stability&&DS-816"
+/var/www/vendor/bin/behat $PROJECT_FOLDER --config $PROJECT_FOLDER/config/behat.yml --tags "stability&&DS-816"
+/var/www/vendor/bin/behat $PROJECT_FOLDER --config $PROJECT_FOLDER/config/behat.yml --tags "stability&&DS-816"
+/var/www/vendor/bin/behat $PROJECT_FOLDER --config $PROJECT_FOLDER/config/behat.yml --tags "stability&&DS-816"
+/var/www/vendor/bin/behat $PROJECT_FOLDER --config $PROJECT_FOLDER/config/behat.yml --tags "stability&&DS-816"
+
