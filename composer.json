@@ -1,6 +1,6 @@
 {
-    "name": "goalgorilla/social_docker",
-    "description": "Social docker template for composer based Open Social projects.",
+    "name": "jonesrussell/anishnawbek-social",
+    "description": "A social community for First Nations.",
     "type": "project",
     "license": "GPL-2.0-or-later",
     "minimum-stability": "dev",
