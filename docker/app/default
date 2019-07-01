@@ -1,0 +1,80 @@
+server {
+    listen 80 default_server;
+
+    root /var/www/html/docroot;
+
+    index index.html index.htm index.php;
+
+    server_name _;
+
+    charset utf-8;
+
+# Add headers.
+  add_header Strict-Transport-Security 'max-age=31536000;';
+  add_header X-XSS-Protection "1; mode=block" always;
+  # Handle error pages;
+  # Configure to override nginx default error page(s).
+  error_page   500  /5xx.html;
+  error_page   502  /5xx.html;
+  error_page   504  /5xx.html;
+  location = /5xx.html {
+    root /var/www/html/docroot;
+  }
+  location = /favicon.ico {
+    log_not_found off;
+    access_log off;
+  }
+  # Handle robots.txt separately
+  location = /robots.txt {
+    allow all;
+    log_not_found off;
+    access_log off;
+  }
+  # Prevent access to files directly.
+  location ~ .*\.config$ {
+    return 403;
+  }
+  location ~ \..*/.*\.php$ {
+    return 403;
+  }
+  location ~ \..*/.*\.yml$ {
+    return 403;
+  }
+  location ~ /composer.*$ {
+    return 403;
+  }
+  # Prevent any hidden files (.htaccess, .gitignore)
+  location ~ (^|/)\. {
+    return 403;
+  }
+  location ~ ^/sites/.*/private/ {
+    return 403;
+  }
+  location / {
+    try_files $uri /index.php?$query_string;
+  }
+  # Re-write URLs to start with index.php
+  location @rewrite {
+    rewrite ^/(.*)$ /index.php?q=$1;
+  }
+  location ~ '\.php$|^/update.php' {
+    # Allow sub-pages after update.php
+    fastcgi_split_path_info ^(.+?\.php)(|/.*)$;
+    #NOTE: You should have "cgi.fix_pathinfo = 0;" in php.ini
+    include fastcgi_params;
+    include snippets/fastcgi-php.conf;
+    fastcgi_param SCRIPT_FILENAME $request_filename;
+    fastcgi_intercept_errors on;
+    fastcgi_pass unix:/run/php/php7.0-fpm.sock;
+  }
+  # Working with image styles.
+  location ~ ^/sites/.*/files/styles/ {
+    try_files $uri @rewrite;
+  }
+  # Set expiration for media, CSS and JS files.
+  location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {
+    expires max;
+    log_not_found off;
+    proxy_cache_bypass 1;
+  }
+}
