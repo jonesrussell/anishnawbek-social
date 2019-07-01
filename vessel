@@ -94,9 +94,15 @@ if [ $# -gt 0 ]; then
         cp .env .env.bak.vessel
 
         if [ ! -z "$(grep "DB_HOST" .env)" ]; then
+<<<<<<< HEAD
             $SEDCMD "s/DB_HOST=.*/DB_HOST=db/" .env
         else
             echo "DB_HOST=db" >> .env
+=======
+            $SEDCMD "s/DB_HOST=.*/DB_HOST=drupalmysql/" .env
+        else
+            echo "DB_HOST=drupalmysql" >> .env
+>>>>>>> 5a54d4e616ead17bf036f6da86f4c94df131ed3d
         fi
 
         if [ ! -z "$(grep "CACHE_DRIVER" .env)" ]; then
@@ -152,11 +158,19 @@ if [ $# -gt 0 ]; then
         if [ "$EXEC" == "yes" ]; then
             $COMPOSE exec \
                 -u vessel \
+<<<<<<< HEAD
                 web \
                 php "$@"
         else
             $COMPOSE run --rm \
                 web \
+=======
+                drupalapp \
+                php "$@"
+        else
+            $COMPOSE run --rm \
+                drupalapp \
+>>>>>>> 5a54d4e616ead17bf036f6da86f4c94df131ed3d
                 php "$@"
         fi
 
@@ -167,11 +181,19 @@ if [ $# -gt 0 ]; then
         if [ "$EXEC" == "yes" ]; then
             $COMPOSE exec \
                 -u vessel \
+<<<<<<< HEAD
                 web \
                 drush "$@"
         else
             $COMPOSE run --rm \
                 web \
+=======
+                drupalapp \
+                drush "$@"
+        else
+            $COMPOSE run --rm \
+                drupalapp \
+>>>>>>> 5a54d4e616ead17bf036f6da86f4c94df131ed3d
                 drush "$@"
         fi
 
@@ -182,11 +204,19 @@ if [ $# -gt 0 ]; then
         if [ "$EXEC" == "yes" ]; then
             $COMPOSE exec \
                 -u vessel \
+<<<<<<< HEAD
                 web \
                 composer "$@"
         else
             $COMPOSE run --rm \
                 web \
+=======
+                drupalapp \
+                composer "$@"
+        else
+            $COMPOSE run --rm \
+                drupalapp \
+>>>>>>> 5a54d4e616ead17bf036f6da86f4c94df131ed3d
                 composer "$@"
         fi
 
@@ -197,11 +227,19 @@ if [ $# -gt 0 ]; then
         if [ "$EXEC" == "yes" ]; then
             $COMPOSE exec \
                 -u vessel \
+<<<<<<< HEAD
                 web \
                 ./vendor/bin/phpunit "$@"
         else
             $COMPOSE run --rm \
                 web \
+=======
+                drupalapp \
+                ./vendor/bin/phpunit "$@"
+        else
+            $COMPOSE run --rm \
+                drupalapp \
+>>>>>>> 5a54d4e616ead17bf036f6da86f4c94df131ed3d
                 ./vendor/bin/phpunit "$@"
         fi
 
@@ -212,11 +250,19 @@ if [ $# -gt 0 ]; then
         if [ "$EXEC" == "yes" ]; then
             $COMPOSE exec \
                 -u vessel \
+<<<<<<< HEAD
                 web \
                 php artisan tinker
         else
             $COMPOSE run --rm \
                 web \
+=======
+                drupalapp \
+                php artisan tinker
+        else
+            $COMPOSE run --rm \
+                drupalapp \
+>>>>>>> 5a54d4e616ead17bf036f6da86f4c94df131ed3d
                 php artisan tinker
         fi
 
@@ -258,11 +304,19 @@ if [ $# -gt 0 ]; then
         shift 1
         if [ "$EXEC" == "yes" ]; then
             $COMPOSE exec \
+<<<<<<< HEAD
                 db \
                 bash -c 'MYSQL_PWD=$MYSQL_ROOT_PASSWORD mysqldump -u root --default-character-set=utf8mb4 $MYSQL_DATABASE'
         else
             $COMPOSE run --rm \
                 db \
+=======
+                drupalmysql \
+                bash -c 'MYSQL_PWD=$MYSQL_ROOT_PASSWORD mysqldump -u root --default-character-set=utf8mb4 $MYSQL_DATABASE'
+        else
+            $COMPOSE run --rm \
+                drupalmysql \
+>>>>>>> 5a54d4e616ead17bf036f6da86f4c94df131ed3d
                 bash -c 'MYSQL_PWD=$MYSQL_ROOT_PASSWORD mysqldump -u root --default-character-set=utf8mb4 $MYSQL_DATABASE'
         fi
 
@@ -272,7 +326,11 @@ if [ $# -gt 0 ]; then
         shift 1
         if [ "$EXEC" == "yes" ]; then
             $COMPOSE exec \
+<<<<<<< HEAD
                 db \
+=======
+                drupalmysql \
+>>>>>>> 5a54d4e616ead17bf036f6da86f4c94df131ed3d
                 bash -c 'MYSQL_PWD=$MYSQL_ROOT_PASSWORD mysql -u root $MYSQL_DATABASE'
         else
             echo "Error: This command can only be run while a MySQL container is running mysqld (mysql server)."
@@ -281,8 +339,13 @@ if [ $# -gt 0 ]; then
 
     # If "ssh" is used, pass-thru to "ssh"
     # inside a new container
+<<<<<<< HEAD
     # e.g.: ./vessel ssh web 
     # e.g.: ./vessel ssh db
+=======
+    # e.g.: ./vessel ssh drupalapp
+    # e.g.: ./vessel ssh drupalmysql
+>>>>>>> 5a54d4e616ead17bf036f6da86f4c94df131ed3d
     elif [ "$1" == "ssh" ]; then
         shift 1
         if [ "$EXEC" == "yes" ] && [ "$1" != "node" ]; then
