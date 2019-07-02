@@ -114,4 +114,4 @@ codekit-config.json
 atlassian-ide-plugin.xml
 
 .env
-
+/private
