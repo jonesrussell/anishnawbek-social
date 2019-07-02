@@ -1,0 +1,16 @@
+uuid: cd28c48a-b514-4168-a979-a3097f4ce733
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - profile
+  module:
+    - profile
+_core:
+  default_config_hash: IacX_1ie8wyjog58jxPOmgTbybUwuJhv8Vjhs-Ttx-A
+id: profile_publish_action
+label: 'Publish selected profile'
+type: profile
+plugin: 'entity:publish_action:profile'
+configuration: {  }
