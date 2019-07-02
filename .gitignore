@@ -114,5 +114,7 @@ codekit-config.json
 atlassian-ide-plugin.xml
 
 .env
-/private/files
-/private/salt.txt
+/private-files
+/config/salt.txt
+/backups
+
