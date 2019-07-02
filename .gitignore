@@ -115,3 +115,4 @@ atlassian-ide-plugin.xml
 
 .env
 /private/files
+/private/salt.txt
