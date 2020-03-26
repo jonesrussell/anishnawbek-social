@@ -1,0 +1,20 @@
+uuid: b385d81d-075c-4667-8bf8-ced1e3eb064a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - socialblue
+id: socialblue_messages
+theme: socialblue
+region: content
+weight: -17
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

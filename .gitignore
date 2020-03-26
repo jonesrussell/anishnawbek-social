@@ -112,3 +112,9 @@ codekit-config.json
 
 # JIRA plugin
 atlassian-ide-plugin.xml
+
+.env
+/private-files
+/config/salt.txt
+/backups
+

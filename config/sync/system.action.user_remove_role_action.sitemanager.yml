@@ -1,0 +1,14 @@
+uuid: 3b4a13f7-bc4a-4b3f-80f0-b1336c36f4c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.sitemanager
+  module:
+    - user
+id: user_remove_role_action.sitemanager
+label: 'Remove the Site manager role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: sitemanager

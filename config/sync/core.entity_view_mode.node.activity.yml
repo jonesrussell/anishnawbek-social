@@ -1,0 +1,12 @@
+uuid: e4fb1d5c-5cbe-4b19-ad65-54bbe71b4ff0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: LpD_MAUoA0okeonj6aHMAbxxudoAFn-YAxAz_reE5yE
+id: node.activity
+label: Activity
+targetEntityType: node
+cache: true

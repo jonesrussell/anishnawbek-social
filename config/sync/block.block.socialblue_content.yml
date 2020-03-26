@@ -1,0 +1,20 @@
+uuid: d2a37ba5-287a-42c5-b429-2494f76d45a3
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - socialblue
+id: socialblue_content
+theme: socialblue
+region: content
+weight: -13
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

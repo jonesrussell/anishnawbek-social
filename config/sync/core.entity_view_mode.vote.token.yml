@@ -1,0 +1,10 @@
+uuid: 3fc6ae35-8116-4ec5-83ef-11b110ef241b
+langcode: en
+status: true
+dependencies:
+  module:
+    - votingapi
+id: vote.token
+label: Token
+targetEntityType: vote
+cache: true

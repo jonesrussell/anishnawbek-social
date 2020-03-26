@@ -1,0 +1,23 @@
+uuid: 36b16143-b5b1-4fb7-8aff-a79c624bf3fb
+langcode: en
+status: true
+dependencies:
+  module:
+    - activity_creator
+    - options
+_core:
+  default_config_hash: jGE58m_OhCvvH-BLcs8VfjxMZMSvcJ0mWeTbWaINUws
+id: activity.field_activity_status
+field_name: field_activity_status
+entity_type: activity
+type: list_string
+settings:
+  allowed_values: {  }
+  allowed_values_function: activity_creator_field_activity_status_allowed_values
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
