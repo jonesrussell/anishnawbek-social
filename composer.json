@@ -1,148 +1,150 @@
 {
-    "name": "jonesrussell/anishnawbek-social",
-    "description": "A social community for First Nations.",
-    "type": "project",
-    "license": "GPL-2.0-or-later",
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "require": {
-        "roave/security-advisories": "dev-master",
-        "composer/installers": "^1.0",
-        "drupal-composer/drupal-scaffold": "^2.0.0",
-        "cweagans/composer-patches": "^1.0",
-        "drush/drush": "8.*@stable",
-        "goalgorilla/open_social": "dev-8.x-8.x",
-        "goalgorilla/open_social_scripts": "dev-master",
-        "drupal/sendgrid_integration": "^1.2"
-        "drupal/social_course": "dev-8.x-2.x",
-        "drupal/social_geolocation": "dev-8.x-1.x",
-        "goalgorilla/social_json_api": "dev-8.x-1.x",
-        "drupal/social_kpi_lite": "dev-8.x-1.x",
-        "goalgorilla/social_pwa": "dev-8.x-1.x",
-        "drupal/redis": "^1.2",
-        "blackfire/php-sdk": "^1.19",
-        "drupal-composer/drupal-security-advisories": "8.x-dev"
+  "name": "jonesrussell/anishnawbek-social",
+  "description": "A social community for First Nations.",
+  "type": "project",
+  "license": "GPL-2.0-or-later",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "roave/security-advisories": "dev-master",
+    "composer/installers": "^1.0",
+    "drupal-composer/drupal-scaffold": "^2.6.1",
+    "cweagans/composer-patches": "^1.0",
+    "drush/drush": "8.*@stable",
+    "goalgorilla/open_social": "~8.0",
+    "goalgorilla/open_social_scripts": "dev-master",
+    "drupal/sendgrid_integration": "^1.2",
+    "drupal/social_course": "dev-8.x-2.x",
+    "drupal/social_geolocation": "dev-8.x-1.x",
+    "goalgorilla/social_json_api": "dev-8.x-1.x",
+    "drupal/social_kpi_lite": "dev-8.x-1.x",
+    "goalgorilla/social_pwa": "dev-8.x-1.x",
+    "drupal/redis": "^1.2",
+    "blackfire/php-sdk": "^1.19",
+    "drupal-composer/drupal-security-advisories": "8.x-dev",
+    "php": "^7.2",
+    "monolog/monolog": "^1.17"
+  },
+  "require-dev": {
+    "jcalderonzumba/gastonjs": "~1.0.2",
+    "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
+    "mikey179/vfsstream": "~1.2",
+    "symfony/css-selector": "~2.8",
+    "behat/behat": "3.*@stable",
+    "behat/mink": "1.*@stable",
+    "behat/mink-extension": "*",
+    "behat/mink-goutte-driver": "*",
+    "behat/mink-selenium2-driver": "*",
+    "dealerdirect/phpcodesniffer-composer-installer": "*",
+    "drupal/coder": "8.3.1",
+    "drupal/drupal-extension": "^3.4",
+    "phpmd/phpmd": "@stable",
+    "sebastian/phpcpd": "@stable",
+    "phpunit/phpunit": "^6.5",
+    "phpunit/php-timer": "^1.0.9",
+    "drupal/console": "@stable",
+    "zaporylie/composer-drupal-optimizations": "^1.0",
+    "squizlabs/html_codesniffer": "*",
+    "mglaman/drupal-check": "^1.0"
+  },
+  "repositories": {
+    "0": {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
     },
-    "require-dev": {
-        "jcalderonzumba/gastonjs": "~1.0.2",
-        "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
-        "mikey179/vfsstream": "~1.2",
-        "symfony/css-selector": "~2.8",
-        "behat/behat": "3.*@stable",
-        "behat/mink": "1.*@stable",
-        "behat/mink-extension": "*",
-        "behat/mink-goutte-driver": "*",
-        "behat/mink-selenium2-driver": "*",
-        "dealerdirect/phpcodesniffer-composer-installer": "*",
-        "drupal/coder": "8.3.1",
-        "drupal/drupal-extension": "^3.4",
-        "phpmd/phpmd": "@stable",
-        "sebastian/phpcpd": "@stable",
-        "phpunit/phpunit": "^6.5",
-        "phpunit/php-timer": "^1.0.9",
-        "drupal/console": "@stable",
-        "zaporylie/composer-drupal-optimizations": "^1.0",
-        "squizlabs/html_codesniffer": "*",
-        "mglaman/drupal-check": "^1.0"
+    "1": {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
     },
-    "repositories": {
-        "0": {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8"
-        },
-        "1": {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
-        },
-        "3": {
-            "type": "package",
-            "package": {
-                "name": "squizlabs/html_codesniffer",
-                "version": "1.0.0",
-                "source": {
-                    "url": "https://github.com/squizlabs/HTML_CodeSniffer.git",
-                    "type": "git",
-                    "reference": "master"
-                }
-            }
-        },
-        "social": {
-            "type": "git",
-            "url": "https://github.com/goalgorilla/open_social.git"
-        },
-        "drupal/social_course": {
-            "type": "git",
-            "url": "https://github.com/goalgorilla/social_course.git"
-        },
-        "drupal/social_geolocation": {
-            "type": "git",
-            "url": "https://github.com/goalgorilla/social_geolocation.git"
-        },
-        "goalgorilla/social_json_api": {
-            "type": "git",
-            "url": "https://github.com/goalgorilla/social_json_api.git"
-        },
-        "drupal/social_kpi_lite": {
-            "type": "git",
-            "url": "https://github.com/goalgorilla/social_kpi_lite.git"
-        },
-        "goalgorilla/social_pwa": {
-            "type": "git",
-            "url": "https://github.com/goalgorilla/social_pwa.git"
+    "3": {
+      "type": "package",
+      "package": {
+        "name": "squizlabs/html_codesniffer",
+        "version": "1.0.0",
+        "source": {
+          "url": "https://github.com/squizlabs/HTML_CodeSniffer.git",
+          "type": "git",
+          "reference": "master"
         }
+      }
     },
-    "scripts": {
-        "post-install-cmd": [
-            "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
-        ],
-        "post-update-cmd": [
-            "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
-        ]
+    "social": {
+      "type": "git",
+      "url": "https://github.com/goalgorilla/open_social.git"
     },
-    "extra": {
-        "installer-types": [
-            "bower-asset",
-            "npm-asset"
-        ],
-        "installer-paths": {
-            "html/core": [
-                "drupal/core"
-            ],
-            "html/modules/contrib/{$name}": [
-                "type:drupal-module"
-            ],
-            "html/profiles/contrib/social": [
-                "goalgorilla/open_social"
-            ],
-            "html/profiles/contrib/{$name}": [
-                "type:drupal-profile"
-            ],
-            "html/themes/contrib/{$name}": [
-                "type:drupal-theme"
-            ],
-            "html/libraries/{$name}": [
-                "type:drupal-library",
-                "type:bower-asset",
-                "type:npm-asset"
-            ],
-            "scripts/{$name}": [
-                "goalgorilla/open_social_scripts"
-            ],
-            "drush/contrib/{$name}": [
-                "type:drupal-drush"
-            ]
-        },
-        "enable-patching": true,
-        "patches": {
-            "drupal/like_dislike": {
-                "Add support for webprofiler": "patches/like-dislike-fix-webprofiler.patch"
-            },
-            "squizlabs/html_codesniffer": {
-                "Translatings does not work": "patches/DS-5443-accessibility.patch"
-            },
-	    "drupal/shariff": {
-	    	"Library in dist directory": "https://www.drupal.org/files/issues/2825745_11.patch"
-	    }
-        }
+    "drupal/social_course": {
+      "type": "git",
+      "url": "https://github.com/goalgorilla/social_course.git"
+    },
+    "drupal/social_geolocation": {
+      "type": "git",
+      "url": "https://github.com/goalgorilla/social_geolocation.git"
+    },
+    "goalgorilla/social_json_api": {
+      "type": "git",
+      "url": "https://github.com/goalgorilla/social_json_api.git"
+    },
+    "drupal/social_kpi_lite": {
+      "type": "git",
+      "url": "https://github.com/goalgorilla/social_kpi_lite.git"
+    },
+    "goalgorilla/social_pwa": {
+      "type": "git",
+      "url": "https://github.com/goalgorilla/social_pwa.git"
     }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
+    ],
+    "post-update-cmd": [
+      "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
+    ]
+  },
+  "extra": {
+    "installer-types": [
+      "bower-asset",
+      "npm-asset"
+    ],
+    "installer-paths": {
+      "html/core": [
+        "drupal/core"
+      ],
+      "html/modules/contrib/{$name}": [
+        "type:drupal-module"
+      ],
+      "html/profiles/contrib/social": [
+        "goalgorilla/open_social"
+      ],
+      "html/profiles/contrib/{$name}": [
+        "type:drupal-profile"
+      ],
+      "html/themes/contrib/{$name}": [
+        "type:drupal-theme"
+      ],
+      "html/libraries/{$name}": [
+        "type:drupal-library",
+        "type:bower-asset",
+        "type:npm-asset"
+      ],
+      "scripts/{$name}": [
+        "goalgorilla/open_social_scripts"
+      ],
+      "drush/contrib/{$name}": [
+        "type:drupal-drush"
+      ]
+    },
+    "enable-patching": true,
+    "patches": {
+      "drupal/like_dislike": {
+        "Add support for webprofiler": "patches/like-dislike-fix-webprofiler.patch"
+      },
+      "squizlabs/html_codesniffer": {
+        "Translatings does not work": "patches/DS-5443-accessibility.patch"
+      },
+      "drupal/shariff": {
+        "Library in dist directory": "https://www.drupal.org/files/issues/2825745_11.patch"
+      }
+    }
+  }
 }
