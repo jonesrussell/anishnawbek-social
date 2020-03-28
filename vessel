@@ -151,7 +151,7 @@ While            $SEDCMD "s/DB_HOST=.*/DB_HOST=db/" .env
         shift 1
         if [ "$EXEC" == "yes" ]; then
             $COMPOSE exec \
-                -u vessel \
+                -u www-data \
                 web \
                 php "$@"
         else
@@ -166,7 +166,7 @@ While            $SEDCMD "s/DB_HOST=.*/DB_HOST=db/" .env
         shift 1
         if [ "$EXEC" == "yes" ]; then
             $COMPOSE exec \
-                -u vessel \
+                -u www-data \
                 web \
                 drush "$@"
         else
@@ -181,7 +181,7 @@ While            $SEDCMD "s/DB_HOST=.*/DB_HOST=db/" .env
         shift 1
         if [ "$EXEC" == "yes" ]; then
             $COMPOSE exec \
-                -u vessel \
+                -u www-data \
                 web \
                 composer "$@"
         else
@@ -196,7 +196,7 @@ While            $SEDCMD "s/DB_HOST=.*/DB_HOST=db/" .env
         shift 1
         if [ "$EXEC" == "yes" ]; then
             $COMPOSE exec \
-                -u vessel \
+                -u www-data \
                 web \
                 ./vendor/bin/phpunit "$@"
         else
@@ -211,7 +211,7 @@ While            $SEDCMD "s/DB_HOST=.*/DB_HOST=db/" .env
         shift 1
         if [ "$EXEC" == "yes" ]; then
             $COMPOSE exec \
-                -u vessel \
+                -u www-data \
                 web \
                 php artisan tinker
         else
@@ -287,7 +287,7 @@ While            $SEDCMD "s/DB_HOST=.*/DB_HOST=db/" .env
         shift 1
         if [ "$EXEC" == "yes" ] && [ "$1" != "node" ]; then
             $COMPOSE exec \
-                -u vessel \
+                -u www-data \
                 $1 \
                 bash
         else

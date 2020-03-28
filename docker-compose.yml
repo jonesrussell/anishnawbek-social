@@ -2,7 +2,7 @@ version: "2"
 
 services:
   web:
-    image: goalgorilla/open_social_docker:dev
+    build: ./docker/web
     volumes:
       - ./:/var/www:delegated
     links:

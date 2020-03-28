@@ -1,7 +1,7 @@
 server {
     listen 80 default_server;
 
-    root /var/www/html/docroot;
+    root /var/www/html;
 
     index index.html index.htm index.php;
 
@@ -18,7 +18,7 @@ server {
   error_page   502  /5xx.html;
   error_page   504  /5xx.html;
   location = /5xx.html {
-    root /var/www/html/docroot;
+    root /var/www/html;
   }
   location = /favicon.ico {
     log_not_found off;
