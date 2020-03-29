@@ -10,7 +10,9 @@ ARG USER_GID=$USER_UID
 # Install apps & cleanup
 RUN apt-get update && apt-get install -y \
   sudo \
+  unzip \
   wget \
+  zip \
   zsh \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
