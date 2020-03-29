@@ -6,7 +6,7 @@
     {
       "label": "vessel: drush site-install",
       "type": "shell",
-      "command": "./vessel drush site-install varbase --yes --site-name='Anishnawbek Social' --account-name=admin --account-pass=changeme --account-mail=admin@blackhole.io",
+      "command": "./vessel drush site-install social --yes --db-url=mysql://anishnawbek:d3vp4ss321@db:3306/anishnawbek_social --site-name='Anishnawbek Social' --account-name=admin --account-pass=changeme --account-mail=admin@blackhole.io",
       "isBackground": true,
       "options": {
         "cwd": "${workspaceRoot}/deps/dashboard-cms"
