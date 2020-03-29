@@ -34,4 +34,7 @@ USER root
 # Install drush
 COPY --from=drush/drush /usr/local/bin/drush /usr/local/bin/drush
 
+# Adjust php configuration
+COPY vessel.ini /usr/local/etc/php/conf.d/99-vessel.ini
+
 WORKDIR /var/www
