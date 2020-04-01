@@ -25,7 +25,28 @@
 	},
 
 	// Add the IDs of extensions you want installed when the container is created.
-	"extensions": []
+	"extensions": [
+		"ms-azuretools.vscode-docker",
+		"p1c2u.docker-compose",
+		"delgee.sld-docker-builder",
+		"dunstontc.vscode-docker-syntax",
+		"tqrhsn.vscode-docker-registry-explorer",
+		"zamarrowski.docker-vulnerability-extension",
+		"dansnow.vscode-dockerfilelint",
+		"david-reis.dockerlive",
+		"ms-vscode-remote.remote-containers",
+		"jeff-hykin.better-dockerfile-syntax",
+		"balaprasanna.bala-bks-docker-snippets",
+		"marquesmps.dockerfile-validator",
+		"ms-vscode-remote.vscode-remote-extensionpack",
+		"foxundermoon.shell-format",
+		"aaron-bond.better-comments",
+		"adisreyaj.cicd-assistant",
+		"gogson.explorer-terminal-commands",
+		"bmuskalla.vscode-tldr",
+		"sncmn.hide-stream",
+		"recca0120.vscode-phpunit"
+	]
 
 	// Uncomment the next line if you want start specific services in your Docker Compose config.
 	// "runServices": [],
