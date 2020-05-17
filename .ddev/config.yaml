@@ -119,6 +119,7 @@ use_dns_when_possible: true
 
 # webimage_extra_packages: [php-yaml, php7.3-ldap]
 # Extra Debian packages that are needed in the webimage can be added here
+webimage_extra_packages: [php7.3-gmp]
 
 # dbimage_extra_packages: [telnet,netcat]
 # Extra Debian packages that are needed in the dbimage can be added here
