@@ -23,7 +23,8 @@
     "blackfire/php-sdk": "^1.19",
     "drupal-composer/drupal-security-advisories": "8.x-dev",
     "php": "^7.2",
-    "monolog/monolog": "^1.17"
+    "monolog/monolog": "^1.17",
+    "drupal/backup_migrate": "^4.1"
   },
   "require-dev": {
     "jcalderonzumba/gastonjs": "~1.0.2",
