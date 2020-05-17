@@ -1,4 +1,3 @@
-uuid: 3e1ed8f0-e2ba-4448-a7e2-bdf4106fc275
 langcode: en
 status: true
 dependencies:
@@ -12,8 +11,6 @@ dependencies:
     - search_api
     - serialization
     - user
-_core:
-  default_config_hash: EQafDXCMypwYPrDr6uYczqhNbATIrOxVucfirCc21XI
 id: search_all_autocomplete
 label: 'Search All autocomplete'
 module: views
@@ -292,7 +289,7 @@ display:
             set_precision: false
             precision: 0
             decimal: .
-            separator: ','
+            separator: ''
             format_plural: false
             format_plural_string: !!binary MQNAY291bnQ=
             prefix: ''
@@ -683,7 +680,7 @@ display:
             set_precision: false
             precision: 0
             decimal: .
-            separator: ','
+            separator: ''
             format_plural: false
             format_plural_string: !!binary MQNAY291bnQ=
             prefix: node/
@@ -766,7 +763,7 @@ display:
             set_precision: false
             precision: 0
             decimal: .
-            separator: ','
+            separator: ''
             format_plural: false
             format_plural_string: !!binary MQNAY291bnQ=
             prefix: user/
@@ -849,7 +846,7 @@ display:
             set_precision: false
             precision: 0
             decimal: .
-            separator: ','
+            separator: ''
             format_plural: false
             format_plural_string: !!binary MQNAY291bnQ=
             prefix: group/

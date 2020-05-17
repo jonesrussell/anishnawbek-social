@@ -1,0 +1,39 @@
+uuid: 7593e5e9-3804-4df5-b2d9-b21e49488178
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.mail_html
+  module:
+    - ckeditor
+_core:
+  default_config_hash: ZYP9yG1R6Ay5SsnqVX2XvGF3oD3ruuMw7Zp_UbGkMY8
+format: mail_html
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Bold
+            - Italic
+        -
+          name: Links
+          items:
+            - DrupalLink
+            - DrupalUnlink
+  plugins:
+    language:
+      language_list: un
+    stylescombo:
+      styles: ''
+image_upload:
+  status: false
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

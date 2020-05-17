@@ -31,6 +31,7 @@ permissions:
   - 'administer menu'
   - 'administer nodes'
   - 'administer own comments'
+  - 'administer post entities'
   - 'cancel account'
   - 'change own username'
   - 'create closed_group group'

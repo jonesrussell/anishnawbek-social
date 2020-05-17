@@ -2,9 +2,24 @@ settings:
   library_url: ''
   css_url: ''
   crop_preview_image_style: crop_thumbnail
-  crop_list: {  }
-  crop_types_required: {  }
+  crop_list:
+    hero: hero
+    hero_an: hero_an
+    hero_small: hero_small
+    profile_large: profile_large
+    profile_medium: profile_medium
+    profile_small: profile_small
+    teaser: teaser
+  crop_types_required:
+    hero: hero
+    hero_an: hero_an
+    hero_small: hero_small
+    profile_large: profile_large
+    profile_medium: profile_medium
+    profile_small: profile_small
+    teaser: teaser
   warn_multiple_usages: false
   show_default_crop: true
+  show_crop_area: false
 _core:
   default_config_hash: JTiHOl3PIo9Nyv7j53xwY5OwbwJWwCItksgv_X-NcbE

@@ -10,3 +10,7 @@ modules:
     none:
       formatter: social_swiftmailer
       sender: social_swiftmailer
+  sendgrid_integration:
+    none:
+      formatter: sendgrid_integration
+      sender: sendgrid_integration
