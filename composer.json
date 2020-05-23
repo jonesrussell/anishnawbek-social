@@ -26,7 +26,9 @@
     "oomphinc/composer-installers-extender": "^1.1",
     "drupal/admin_toolbar_search": "^1.0",
     "drupal/schema_metatag": "^1.4",
-    "drupal-composer/drupal-scaffold": "^2.6.1"
+    "drupal-composer/drupal-scaffold": "^2.6.1",
+    "drupal/flysystem": "^1.0",
+    "drupal/rdfui": "^1.0"
   },
   "require-dev": {
     "jcalderonzumba/gastonjs": "~1.0.2",
