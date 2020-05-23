@@ -8,7 +8,6 @@
   "require": {
     "roave/security-advisories": "dev-master",
     "composer/installers": "^1.0",
-    "drupal-composer/drupal-scaffold": "^2.6.1",
     "cweagans/composer-patches": "^1.0",
     "drush/drush": "8.*@stable",
     "goalgorilla/open_social": "~8.0",
@@ -26,7 +25,8 @@
     "drupal/backup_migrate": "^4.1",
     "oomphinc/composer-installers-extender": "^1.1",
     "drupal/admin_toolbar_search": "^1.0",
-    "drupal/schema_metatag": "^1.4"
+    "drupal/schema_metatag": "^1.4",
+    "drupal/core-composer-scaffold": "^8.8"
   },
   "require-dev": {
     "jcalderonzumba/gastonjs": "~1.0.2",
