@@ -159,7 +159,7 @@ webimage_extra_packages: [php7.3-gmp]
 # See https://ddev.readthedocs.io/en/stable/users/extending-commands/ for more
 # information on the commands that can be extended and the tasks you can define
 # for them. Example:
-#hooks:
-# post-import-db:
-#   - exec: drush cr
+hooks:
+  post-import-db:
+    - exec: drush cr
 #   - exec: drush updb
