@@ -28,7 +28,8 @@
     "drupal/schema_metatag": "^1.4",
     "drupal-composer/drupal-scaffold": "^2.6.1",
     "drupal/flysystem": "^1.0",
-    "drupal/rdfui": "^1.0"
+    "drupal/rdfui": "^1.0",
+    "drupal/flysystem_s3": "^1.0"
   },
   "require-dev": {
     "jcalderonzumba/gastonjs": "~1.0.2",
