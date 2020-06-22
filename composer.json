@@ -31,7 +31,8 @@
     "goalgorilla/social_json_api": "dev-8.x-1.x",
     "monolog/monolog": "^1.17",
     "oomphinc/composer-installers-extender": "^1.1",
-    "roave/security-advisories": "dev-master"
+    "roave/security-advisories": "dev-master",
+    "zaporylie/composer-drupal-optimizations": "^1.0"
   },
   "require-dev": {
     "jcalderonzumba/gastonjs": "~1.0.2",
@@ -51,7 +52,6 @@
     "phpunit/phpunit": "^6.5",
     "phpunit/php-timer": "^1.0.9",
     "drupal/console": "@stable",
-    "zaporylie/composer-drupal-optimizations": "^1.1",
     "squizlabs/html_codesniffer": "*",
     "mglaman/drupal-check": "^1.0"
   },
