@@ -17,6 +17,7 @@
     "drupal/backup_migrate": "^4.1",
     "drupal/flysystem": "^1.0",
     "drupal/flysystem_s3": "^1.0",
+    "drupal/jsonapi_extras": "^3.14",
     "drupal/rdfui": "^1.0",
     "drupal/redis": "^1.2",
     "drupal/schema_metatag": "^1.4",
