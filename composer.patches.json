@@ -1,10 +1,10 @@
 {
   "patches": {
     "drupal/like_dislike": {
-      "Add support for webprofiler": "patches/like-dislike-fix-webprofiler.patch"
+      "Add support for webprofiler": "./patches/like-dislike-fix-webprofiler.patch"
     },
     "squizlabs/html_codesniffer": {
-      "Translatings does not work": "patches/DS-5443-accessibility.patch"
+      "Translatings does not work": "./patches/DS-5443-accessibility.patch"
     },
     "drupal/shariff": {
       "Library in dist directory": "https://www.drupal.org/files/issues/2825745_11.patch"
