@@ -15,6 +15,7 @@
     "drupal/admin_toolbar_search": "^1.0",
     "drupal/adminimal_theme": "^1.5",
     "drupal/backup_migrate": "^4.1",
+    "drupal/checklistapi": "^2.0",
     "drupal/flysystem": "^1.0",
     "drupal/flysystem_s3": "^1.0",
     "drupal/jsonapi_extras": "^3.14",
@@ -64,7 +65,7 @@
       "type": "composer",
       "url": "https://asset-packagist.org"
     },
-    "3": {
+    "2": {
       "type": "package",
       "package": {
         "name": "squizlabs/html_codesniffer",
@@ -143,20 +144,7 @@
       ]
     },
     "enable-patching": true,
-    "patches": {
-      "drupal/like_dislike": {
-        "Add support for webprofiler": "patches/like-dislike-fix-webprofiler.patch"
-      },
-      "squizlabs/html_codesniffer": {
-        "Translatings does not work": "patches/DS-5443-accessibility.patch"
-      },
-      "drupal/shariff": {
-        "Library in dist directory": "https://www.drupal.org/files/issues/2825745_11.patch"
-      },
-      "drupal/rdfui": {
-        "Cannot use DrupalComponentUtilityString as String": "https://www.drupal.org/files/issues/rdfui-2906439-safe.patch"
-      }
-    }
+    "patches-file": "./composer.patches.json"
   },
   "config": {
     "sort-packages": true,
