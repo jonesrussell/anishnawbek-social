@@ -6,11 +6,11 @@ $aliases['dev'] = array(
 );
 
 $aliases['live'] = array(
-  'uri' => 'https://www.anishnawbek.xyz',
-  'remote-host' => 'www.anishnawbek.xyz',
-  'remote-user' => 'russell',
-  'root' => '/srv/www/www.anishnawbek.xyz/html',
-  'path-aliases' => array(
-      '%drush-script' => '/home/russell/.local/bin/drush',
-  ),
+    'root' => '/srv/www/www.anishnawbek.xyz/html',
+    'uri' => 'https://www.anishnawbek.xyz',
+    'remote-host' => 'www.anishnawbek.xyz',
+    'remote-user' => 'russell',
+    'path-aliases' => array(
+        '%drush-script' => '/home/russell/.local/bin/drush',
+    ),
 );
