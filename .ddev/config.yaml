@@ -1,7 +1,7 @@
 name: anishnawbek-social
 type: drupal8
 docroot: html
-php_version: "7.2"
+php_version: "7.4"
 webserver_type: nginx-fpm
 router_http_port: "80"
 router_https_port: "443"
@@ -12,7 +12,7 @@ provider: default
 hooks:
   post-import-db:
   - exec: drush cr
-webimage_extra_packages: [php7.3-gmp]
+webimage_extra_packages: [php7.4-gmp]
 use_dns_when_possible: true
 
 
@@ -33,7 +33,7 @@ use_dns_when_possible: true
 
 # docroot: <relative_path> # Relative path to the directory containing index.php.
 
-# php_version: "7.3"  # PHP version to use, "5.6", "7.0", "7.1", "7.2", "7.3", "7.4"
+# php_version: "7.4"  # PHP version to use, "5.6", "7.0", "7.1", "7.2", "7.3", "7.4"
 
 # You can explicitly specify the webimage, dbimage, dbaimage lines but this
 # is not recommended, as the images are often closely tied to ddev's' behavior,
@@ -121,7 +121,7 @@ use_dns_when_possible: true
 # mailhog_https_port: "8026"
 # The MailHog ports can be changed from the default 8025 and 8026
 
-# webimage_extra_packages: [php7.3-tidy, php-bcmath]
+# webimage_extra_packages: [php7.4-tidy, php-bcmath]
 # Extra Debian packages that are needed in the webimage can be added here
 
 # dbimage_extra_packages: [telnet,netcat]
