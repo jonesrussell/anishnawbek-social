@@ -11,6 +11,6 @@ $aliases['live'] = array(
   'remote-user' => 'russell',
   'root' => '/srv/www/www.anishnawbek.xyz/html',
   'path-aliases' => array(
-      '%drush' => '/home/russell/.local/bin/drush',
+      '%drush-script' => '/home/russell/.local/bin/drush',
   ),
 );
