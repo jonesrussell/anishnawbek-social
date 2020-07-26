@@ -1,6 +1,6 @@
 {
-  "name": "jonesrussell/anishnawbek-social",
-  "description": "A social community for First Nations.",
+  "name": "goalgorilla/social_docker",
+  "description": "Social docker template for composer based Open Social projects.",
   "type": "project",
   "license": "GPL-2.0-or-later",
   "minimum-stability": "dev",
@@ -65,7 +65,7 @@
       "type": "composer",
       "url": "https://asset-packagist.org"
     },
-    "2": {
+    "3": {
       "type": "package",
       "package": {
         "name": "squizlabs/html_codesniffer",
