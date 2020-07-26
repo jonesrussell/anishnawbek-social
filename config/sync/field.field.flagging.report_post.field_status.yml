@@ -1,0 +1,28 @@
+uuid: 116a7707-228b-4804-91a4-5ae7f3f7f7dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.flagging.field_status
+    - flag.flag.report_post
+  enforced:
+    module:
+      - social_content_report
+_core:
+  default_config_hash: U941wxBoA-9Q7moQJ6-OYT8dg90Ue7wIyuafDVa2OiQ
+id: flagging.report_post.field_status
+field_name: field_status
+entity_type: flagging
+bundle: report_post
+label: Status
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Active
+  off_label: Closed
+field_type: boolean

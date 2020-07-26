@@ -17,7 +17,7 @@ dependencies:
     - text
     - user
 _core:
-  default_config_hash: '-Nd9-hm-3LGw3kIK8qoz8K1_H41xylWiCzL9s8RtzGI'
+  default_config_hash: TV84ReHP4ASWhjN-amHZQYBLHB7-zLswDjMR-JiahAY
 id: post.photo.default
 targetEntityType: post
 bundle: photo
@@ -60,3 +60,4 @@ hidden:
   field_recipient_user: true
   field_visibility: true
   like_and_dislike: true
+  search_api_excerpt: true

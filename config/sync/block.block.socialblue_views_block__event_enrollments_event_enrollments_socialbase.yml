@@ -10,6 +10,8 @@ dependencies:
     - views
   theme:
     - socialblue
+_core:
+  default_config_hash: WoH7kJIJuRWNxIKfVBMMzetSmnHFu2n5YQfpZHZl8zU
 id: socialblue_views_block__event_enrollments_event_enrollments_socialbase
 theme: socialblue
 region: complementary_top

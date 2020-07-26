@@ -8,6 +8,7 @@ dependencies:
     - profile
     - user
     - search_api
+    - social_profile_privacy
     - social_search
   config:
     - field.storage.group.field_group_description
@@ -22,7 +23,7 @@ dependencies:
     - core.entity_view_mode.node.search_index
     - core.entity_view_mode.profile.search_index
 _core:
-  default_config_hash: LpqLXEwjFyZgVElMD68lw2izxgg3GX5NzFRkL_HI9ls
+  default_config_hash: goovsLG3NGklz1Rw0gvASpRVjQH54b_nyFh7Gbrq6Fk
 id: social_all
 name: 'Social all'
 description: 'All content index created for the Social distribution.'
@@ -147,6 +148,12 @@ field_settings:
           topic: search_index
         'entity:profile':
           profile: search_index
+  social_profile_privacy_restricted_name:
+    label: 'Restricted Name'
+    datasource_id: 'entity:profile'
+    property_path: social_profile_privacy_restricted_name
+    type: text
+    indexed_locked: true
   status:
     label: 'Publishing status'
     datasource_id: 'entity:node'
@@ -271,7 +278,7 @@ processor_settings:
       preprocess_index: -15
       preprocess_query: -15
   ignorecase:
-    all_fields: false
+    all_fields: true
     fields:
       - field_group_description
       - field_group_location
@@ -280,12 +287,16 @@ processor_settings:
       - label
       - name
       - rendered_item
+      - social_profile_privacy_restricted_name
       - title
       - type
+      - type_1
     weights:
       preprocess_index: -20
       preprocess_query: -20
+  language_with_fallback: {  }
   rendered_item: {  }
+  social_profile_privacy_restricted_name: {  }
   stopwords:
     all_fields: false
     fields:
@@ -334,12 +345,17 @@ processor_settings:
     weights:
       preprocess_query: 30
   tokenizer:
-    all_fields: false
+    all_fields: true
     fields:
       - field_group_description
       - field_profile_first_name
       - field_profile_last_name
+      - label
+      - name
       - rendered_item
+      - social_profile_privacy_restricted_name
+      - title
+      - type_1
     spaces: ''
     overlap_cjk: 1
     minimum_word_size: '3'
@@ -347,7 +363,7 @@ processor_settings:
       preprocess_index: -6
       preprocess_query: -6
   transliteration:
-    all_fields: false
+    all_fields: true
     fields:
       - field_group_description
       - field_group_location
@@ -356,8 +372,10 @@ processor_settings:
       - label
       - name
       - rendered_item
+      - social_profile_privacy_restricted_name
       - title
       - type
+      - type_1
     weights:
       preprocess_index: -20
       preprocess_query: -20

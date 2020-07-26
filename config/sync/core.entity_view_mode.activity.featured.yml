@@ -1,0 +1,10 @@
+uuid: b4e60987-3957-44f7-aa7d-4246a6278329
+langcode: en
+status: true
+dependencies:
+  module:
+    - activity_creator
+id: activity.featured
+label: Featured
+targetEntityType: activity
+cache: true

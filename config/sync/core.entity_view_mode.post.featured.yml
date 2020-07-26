@@ -1,0 +1,10 @@
+uuid: 75f378fd-685f-409f-9486-2276fc2e1d9a
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_post
+id: post.featured
+label: Featured
+targetEntityType: post
+cache: true

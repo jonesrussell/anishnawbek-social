@@ -17,7 +17,7 @@ dependencies:
     - social_core
     - user
 _core:
-  default_config_hash: AuMtDmEFDXoh8y5-NLJosvuX0ocwUopQS06uaG77r60
+  default_config_hash: RkD2eSQGlysfiL4fx49lolNQgKH_694ut-vNNMPx60M
 id: node.topic.activity
 targetEntityType: node
 bundle: topic
@@ -64,4 +64,7 @@ hidden:
   groups: true
   groups_type_closed_group: true
   groups_type_open_group: true
+  groups_type_public_group: true
   like_and_dislike: true
+  search_api_excerpt: true
+  shariff_field: true

@@ -23,7 +23,7 @@ dependencies:
     - social_core
     - user
 _core:
-  default_config_hash: Y7kD3a07lL7WPa-f52h4cuwM1mua6sSGJEgtcSPPRTg
+  default_config_hash: AvAhpZtQ04gJ2BOmJl0tfAFqPdvZ4Bv2o2LxrxVjemg
 id: node.event.activity
 targetEntityType: node
 bundle: event
@@ -105,3 +105,5 @@ hidden:
   groups_type_closed_group: true
   groups_type_open_group: true
   like_and_dislike: true
+  search_api_excerpt: true
+  shariff_field: true

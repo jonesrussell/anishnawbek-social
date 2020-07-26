@@ -13,7 +13,7 @@ dependencies:
   module:
     - dropdown
 _core:
-  default_config_hash: WU5RP0OlbkLrfULjyeVIbzVODVg_PS3g5tpwmtH06X0
+  default_config_hash: xUAASellzoAFb-FN2_bDBzYYyPEQ93N-cQ1B7F7AfYQ
 id: post.post.profile
 targetEntityType: post
 bundle: post

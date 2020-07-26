@@ -9,6 +9,8 @@ dependencies:
     - user
   theme:
     - socialblue
+_core:
+  default_config_hash: B2tojDJyWg4NEUWtwg0U0WoKVUsG4p_4TuBXTIbW3S0
 id: socialblue_account_menu
 theme: socialblue
 region: header

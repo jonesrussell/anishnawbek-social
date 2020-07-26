@@ -14,9 +14,8 @@ dependencies:
     - profile
     - social_group
     - user
-    - views_bulk_operations
 _core:
-  default_config_hash: pk9RgTf2qfYu_Cecwv-kS6TQhIRRgXcZBGV4zkPaAxE
+  default_config_hash: GDpJ5bx9nGGYG25jH2WHORrRapda7bbMxIpFZOPZ1jk
 id: group_manage_members
 label: 'Group Manage Members'
 module: views
@@ -24,7 +23,6 @@ description: ''
 tag: ''
 base_table: group_content_field_data
 base_field: id
-core: 8.x
 display:
   default:
     display_plugin: default
@@ -82,10 +80,10 @@ display:
       row:
         type: fields
       fields:
-        views_bulk_operations_bulk_form:
-          id: views_bulk_operations_bulk_form
+        social_views_bulk_operations_bulk_form_group:
+          id: social_views_bulk_operations_bulk_form_group
           table: views
-          field: views_bulk_operations_bulk_form
+          field: social_views_bulk_operations_bulk_form_group
           relationship: none
           group_type: group
           admin_label: ''
@@ -119,7 +117,7 @@ display:
             preserve_tags: ''
             html: false
           element_type: ''
-          element_class: ''
+          element_class: views-field-views-bulk-operations-bulk-form
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
@@ -130,28 +128,25 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          batch: true
-          batch_size: 10
+          batch: 1
+          batch_size: '10'
           form_step: true
-          buttons: true
-          clear_on_exposed: false
+          buttons: 0
+          clear_on_exposed: 0
           action_title: Action
           selected_actions:
             comment_delete_action: 0
-            social_group_members_export_member_action: 0
             views_bulk_operations_delete_entity: 0
-            social_group_send_email_action: social_group_send_email_action
-            social_group_delete_group_content_action: social_group_delete_group_content_action
             social_group_change_member_role_action: social_group_change_member_role_action
+            social_group_delete_group_content_action: social_group_delete_group_content_action
+            social_group_send_email_action: social_group_send_email_action
             'entity:save_action:group_content': 0
           preconfiguration:
-            social_group_send_email_action:
-              label_override: Email
-            social_group_delete_group_content_action:
-              label_override: Remove
             social_group_change_member_role_action:
               label_override: 'Change the role'
-          plugin_id: views_bulk_operations_bulk_form
+            social_group_delete_group_content_action:
+              label_override: Remove
+          plugin_id: social_views_bulk_operations_bulk_form_group
         rendered_entity:
           id: rendered_entity
           table: profile
@@ -475,6 +470,8 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -597,7 +594,6 @@ display:
     cache_metadata:
       max-age: 0
       contexts:
-        - group_membership.roles.permissions
         - 'languages:language_content'
         - 'languages:language_interface'
         - route
@@ -628,7 +624,6 @@ display:
     cache_metadata:
       max-age: 0
       contexts:
-        - group_membership.roles.permissions
         - 'languages:language_content'
         - 'languages:language_interface'
         - route

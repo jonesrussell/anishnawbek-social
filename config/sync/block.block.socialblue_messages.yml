@@ -6,6 +6,8 @@ dependencies:
     - system
   theme:
     - socialblue
+_core:
+  default_config_hash: eVKhOL_cct67bmqEqLvJdxLYRhBDWp02t-UrdcJgIrQ
 id: socialblue_messages
 theme: socialblue
 region: content

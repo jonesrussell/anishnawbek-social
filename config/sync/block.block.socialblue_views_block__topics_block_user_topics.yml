@@ -9,6 +9,8 @@ dependencies:
     - views
   theme:
     - socialblue
+_core:
+  default_config_hash: Yy_BNByTXbY8nWGFFBwq_s4kiC6XR_8VMjnBtmkoxeA
 id: socialblue_views_block__topics_block_user_topics
 theme: socialblue
 region: complementary_bottom

@@ -5,11 +5,14 @@ dependencies:
   module:
     - node
     - search_api
+    - social_profile_privacy
   config:
+    - field.storage.node.field_event_date
+    - field.storage.node.field_event_date_end
     - search_api.server.social_database
     - core.entity_view_mode.node.search_index
 _core:
-  default_config_hash: '-3BpMLu-4DIBjccs8M-gM1Bo2npmDHVNARsmt0n_z2A'
+  default_config_hash: i5b5PgQnBCQRIl4RvQI0_D7TZFcMIujMBfSEO1eYWyA
 id: social_content
 name: 'Social Content'
 description: 'Default content index created for the Social distribution.'
@@ -23,6 +26,22 @@ field_settings:
     dependencies:
       module:
         - node
+  field_event_date:
+    label: Start
+    datasource_id: 'entity:node'
+    property_path: field_event_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_event_date
+  field_event_date_end:
+    label: End
+    datasource_id: 'entity:node'
+    property_path: field_event_date_end
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_event_date_end
   node_grants:
     label: 'Node access information'
     property_path: search_api_node_grants
@@ -124,18 +143,21 @@ processor_settings:
       preprocess_query: -10
   ignorecase:
     plugin_id: ignorecase
-    all_fields: false
+    all_fields: true
     fields:
       - rendered_item
       - title
+      - type
     weights:
       preprocess_index: -10
       preprocess_query: -10
+  language_with_fallback: {  }
   rendered_item:
     plugin_id: rendered_item
     weights:
       add_properties: 0
       pre_index_save: -10
+  social_profile_privacy_restricted_name: {  }
   stopwords:
     plugin_id: stopwords
     all_fields: false
@@ -183,10 +205,11 @@ processor_settings:
       preprocess_query: -2
   tokenizer:
     plugin_id: tokenizer
-    all_fields: false
+    all_fields: true
     fields:
       - rendered_item
       - title
+      - type
     spaces: ''
     overlap_cjk: 1
     minimum_word_size: '3'
@@ -195,10 +218,11 @@ processor_settings:
       preprocess_query: -6
   transliteration:
     plugin_id: transliteration
-    all_fields: false
+    all_fields: true
     fields:
       - rendered_item
       - title
+      - type
     weights:
       preprocess_index: -10
       preprocess_query: -10

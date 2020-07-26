@@ -8,6 +8,8 @@ dependencies:
     - system
   theme:
     - socialblue
+_core:
+  default_config_hash: tQ-MDDsFp4RzTuHm5OMu2SjbOtVGMK1rzYhxhYnrsBw
 id: socialblue_pagetitleblock
 theme: socialblue
 region: hero

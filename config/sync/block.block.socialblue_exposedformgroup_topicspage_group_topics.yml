@@ -9,6 +9,8 @@ dependencies:
     - views
   theme:
     - socialblue
+_core:
+  default_config_hash: awPVKI9tiREex_ehHn3hcHv4yrRbcFMnfHRPJQ1J_9Q
 id: socialblue_exposedformgroup_topicspage_group_topics
 theme: socialblue
 region: complementary_top

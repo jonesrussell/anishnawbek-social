@@ -10,6 +10,8 @@ dependencies:
     - views
   theme:
     - socialblue
+_core:
+  default_config_hash: nh5w2HyyMdVmLkORoql-7P8RXgsF_bl26XLi2MFy49w
 id: socialblue_exposedformeventsevents_overview
 theme: socialblue
 region: complementary_top

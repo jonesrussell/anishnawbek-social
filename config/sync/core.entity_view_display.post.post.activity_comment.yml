@@ -14,7 +14,7 @@ dependencies:
     - text
     - user
 _core:
-  default_config_hash: 9gulmheZg0DioReaTCSx_BhT3fuYtbBa_3MgZ-VDk6g
+  default_config_hash: IYTKUagTdtDITMQnKkOvAx_rDUwA4NyUX0xKpx5_R4o
 id: post.post.activity_comment
 targetEntityType: post
 bundle: post
@@ -40,3 +40,4 @@ hidden:
   field_recipient_user: true
   field_visibility: true
   like_and_dislike: true
+  search_api_excerpt: true

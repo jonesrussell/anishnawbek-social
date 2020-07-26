@@ -1,0 +1,26 @@
+uuid: de5d2a44-2f0f-4ae2-832b-e23f81665906
+langcode: en
+status: true
+dependencies:
+  module:
+    - private_message
+    - social_private_message
+_core:
+  default_config_hash: MC8mdpqmm7Ondq2Unne60vCjJD_m-jRjtS18alTkr08
+id: private_message_thread.private_message_thread.default
+targetEntityType: private_message_thread
+bundle: private_message_thread
+mode: default
+content:
+  members:
+    type: social_private_message_thread_member_widget
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+      max_members: 0
+    weight: -3
+    region: content
+    third_party_settings: {  }
+hidden: {  }

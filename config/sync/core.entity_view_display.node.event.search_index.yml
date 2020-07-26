@@ -21,7 +21,7 @@ dependencies:
     - text
     - user
 _core:
-  default_config_hash: 2OrnR1Dbh9fUUI1h0RJfwJjCCJNfeUxKQ_9c9uM4QsI
+  default_config_hash: VwofvcGJ5GstIT4cx994N4JaaC9JQLo9E1XhOYQkecg
 id: node.event.search_index
 targetEntityType: node
 bundle: event
@@ -67,3 +67,5 @@ hidden:
   groups_type_open_group: true
   like_and_dislike: true
   links: true
+  search_api_excerpt: true
+  shariff_field: true

@@ -1,5 +1,5 @@
 uuid: 4add8bc9-3493-40af-acee-d4fe20484075
-name: 'We The First'
+name: 'We The First Nation'
 mail: webmaster@anishnawbek.xyz
 slogan: ''
 page:
@@ -12,3 +12,4 @@ langcode: en
 default_langcode: en
 _core:
   default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+show_mail_in_messages: 1

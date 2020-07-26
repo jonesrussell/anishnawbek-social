@@ -6,7 +6,7 @@ dependencies:
     - field.storage.node.field_event_enroll
     - node.type.event
 _core:
-  default_config_hash: MhRr0lj2xDxHDvWc3VVz-cZVg8KlV4jERnEae5cHHCk
+  default_config_hash: dg5hI1x6XsBNYwXstCuv_7C-_wl4t2SZI-HF4pemu1Q
 id: node.event.field_event_enroll
 field_name: field_event_enroll
 entity_type: node

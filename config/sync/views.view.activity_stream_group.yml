@@ -10,7 +10,7 @@ dependencies:
     - group
     - options
 _core:
-  default_config_hash: fMggHeEZ8WbsPBI7hh92fCq0C3XfCJfAKDMqHT345so
+  default_config_hash: 3iSpIb12xtcDbygGMKEwDajF_UxdjbJOLsfjNMM_fwE
 id: activity_stream_group
 label: activity_stream_group
 module: views
@@ -18,7 +18,6 @@ description: 'Activity stream on a group'
 tag: ''
 base_table: activity_field_data
 base_field: id
-core: 8.x
 display:
   default:
     display_plugin: default
@@ -31,7 +30,7 @@ display:
         options:
           group_permission: 'view group stream page'
       cache:
-        type: none
+        type: tag
         options: {  }
       query:
         type: views_query
@@ -150,6 +149,8 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -189,6 +190,8 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -226,6 +229,8 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -313,11 +318,12 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
-        - group_membership.roles.permissions
         - 'languages:language_interface'
         - route
+        - route.group
         - url
         - url.query_args
+        - user.group_permissions
       tags:
         - 'config:core.entity_view_display.activity.activity.default'
         - 'config:core.entity_view_display.activity.activity.notification'
@@ -333,11 +339,12 @@ display:
     cache_metadata:
       max-age: -1
       contexts:
-        - group_membership.roles.permissions
         - 'languages:language_interface'
         - route
+        - route.group
         - url
         - url.query_args
+        - user.group_permissions
       tags:
         - 'config:core.entity_view_display.activity.activity.default'
         - 'config:core.entity_view_display.activity.activity.notification'

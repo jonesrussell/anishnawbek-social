@@ -6,6 +6,7 @@ dependencies:
     - profile
     - user
     - search_api
+    - social_profile_privacy
     - social_search
   config:
     - field.storage.profile.field_profile_expertise
@@ -16,7 +17,7 @@ dependencies:
     - search_api.server.social_database
     - core.entity_view_mode.profile.search_index
 _core:
-  default_config_hash: vRJ1M2MvxZYCDtgdNo2ieT5vcwDQe9cI9Q7Djfd3th4
+  default_config_hash: m7VY6iBT_LU6nh559ipGnTMSi5AT3PBGuRfnCumh-7w
 id: social_users
 name: 'Social Users'
 description: 'Default users index created for the Social distribution.'
@@ -94,6 +95,12 @@ field_settings:
         'entity:profile':
           main: ''
           profile: search_index
+  social_profile_privacy_restricted_name:
+    label: 'Restricted Name'
+    datasource_id: 'entity:profile'
+    property_path: social_profile_privacy_restricted_name
+    type: text
+    indexed_locked: true
   uid:
     label: Owner
     datasource_id: 'entity:profile'
@@ -151,20 +158,23 @@ processor_settings:
       preprocess_query: -10
   ignorecase:
     plugin_id: ignorecase
-    all_fields: false
+    all_fields: true
     fields:
       - field_profile_first_name
       - field_profile_last_name
       - name
       - rendered_item
+      - social_profile_privacy_restricted_name
     weights:
       preprocess_index: -10
       preprocess_query: -10
+  language_with_fallback: {  }
   rendered_item:
     plugin_id: rendered_item
     weights:
       add_properties: 0
       pre_index_save: -10
+  social_profile_privacy_restricted_name: {  }
   stopwords:
     plugin_id: stopwords
     all_fields: false
@@ -215,12 +225,13 @@ processor_settings:
       preprocess_query: 30
   tokenizer:
     plugin_id: tokenizer
-    all_fields: false
+    all_fields: true
     fields:
       - field_profile_first_name
       - field_profile_last_name
       - name
       - rendered_item
+      - social_profile_privacy_restricted_name
     spaces: ''
     overlap_cjk: 1
     minimum_word_size: '3'
@@ -229,12 +240,13 @@ processor_settings:
       preprocess_query: -6
   transliteration:
     plugin_id: transliteration
-    all_fields: false
+    all_fields: true
     fields:
       - field_profile_first_name
       - field_profile_last_name
       - name
       - rendered_item
+      - social_profile_privacy_restricted_name
     weights:
       preprocess_index: -10
       preprocess_query: -10

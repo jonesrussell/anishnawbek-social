@@ -14,7 +14,7 @@ dependencies:
     - text
     - user
 _core:
-  default_config_hash: JNBwWHCvAmeyGNkIo_1Kt38Bp6d31CU8MNgWNQ2Xd-E
+  default_config_hash: qiX0wOSo2Jbw9J7WpP8cfiPfSqdZBivJTfnPIiuezG4
 id: post.post.default
 targetEntityType: post
 bundle: post
@@ -36,11 +36,6 @@ content:
       order: ASC
     third_party_settings: {  }
     region: content
-  like_and_dislike:
-    weight: 2
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   user_id:
     label: hidden
     type: author
@@ -52,3 +47,5 @@ hidden:
   field_recipient_group: true
   field_recipient_user: true
   field_visibility: true
+  like_and_dislike: true
+  search_api_excerpt: true

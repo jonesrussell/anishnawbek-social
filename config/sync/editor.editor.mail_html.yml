@@ -7,7 +7,7 @@ dependencies:
   module:
     - ckeditor
 _core:
-  default_config_hash: ZYP9yG1R6Ay5SsnqVX2XvGF3oD3ruuMw7Zp_UbGkMY8
+  default_config_hash: 0ZuIyRqFfckI3FxNFvdEw4Qp4TI80a59GSXvtraNP7g
 format: mail_html
 editor: ckeditor
 settings:
@@ -19,6 +19,7 @@ settings:
           items:
             - Bold
             - Italic
+            - Underline
         -
           name: Links
           items:

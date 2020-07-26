@@ -6,6 +6,8 @@ dependencies:
     - system
   theme:
     - socialblue
+_core:
+  default_config_hash: nUdhCVU-Y9wjS1Ei29Kt1VN1rLZc6dn0nJQSHJv2Vg8
 id: socialblue_sitebranding
 theme: socialblue
 region: header

@@ -17,7 +17,7 @@ dependencies:
     - options
     - user
 _core:
-  default_config_hash: i9e-58eA8WY1XqEK9fM255whIFjXw2dtS2dWX5hW0lY
+  default_config_hash: 04NtMjR4-qurYxwI_s6nPsYd-Itjk0nTzjcA0ykdtfI
 id: node.topic.teaser
 targetEntityType: node
 bundle: topic
@@ -67,3 +67,6 @@ hidden:
   groups: true
   groups_type_closed_group: true
   groups_type_open_group: true
+  groups_type_public_group: true
+  search_api_excerpt: true
+  shariff_field: true

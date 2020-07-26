@@ -6,12 +6,13 @@ dependencies:
     - group
     - user
     - search_api
+    - social_profile_privacy
   config:
     - field.storage.group.field_group_description
     - search_api.server.social_database
     - core.entity_view_mode.group.teaser
 _core:
-  default_config_hash: B73LT7KjWRvFvCD7HLRN2zGfq2VzvVkYZ1iMB5XiBnQ
+  default_config_hash: tUFXFR3gN_XD85cd0oLbYRHP-Gwf0CZgtBjzeLfHyJI
 id: social_groups
 name: 'Social Groups'
 description: 'Default group index created for the Social distribution.'
@@ -139,7 +140,7 @@ processor_settings:
       - Ps
   ignorecase:
     plugin_id: ignorecase
-    all_fields: false
+    all_fields: true
     fields:
       - field_group_description
       - label
@@ -149,11 +150,13 @@ processor_settings:
     weights:
       preprocess_index: -10
       preprocess_query: -10
+  language_with_fallback: {  }
   rendered_item:
     plugin_id: rendered_item
     weights:
       add_properties: 0
       pre_index_save: -10
+  social_profile_privacy_restricted_name: {  }
   stopwords:
     plugin_id: stopwords
     all_fields: false
@@ -201,9 +204,10 @@ processor_settings:
       preprocess_query: -2
   tokenizer:
     plugin_id: tokenizer
-    all_fields: false
+    all_fields: true
     fields:
       - field_group_description
+      - label
       - rendered_item
     spaces: ''
     overlap_cjk: 1
@@ -213,11 +217,13 @@ processor_settings:
       preprocess_query: -6
   transliteration:
     plugin_id: transliteration
-    all_fields: false
+    all_fields: true
     fields:
       - field_group_description
       - label
+      - name
       - rendered_item
+      - type
     weights:
       preprocess_index: -10
       preprocess_query: -10

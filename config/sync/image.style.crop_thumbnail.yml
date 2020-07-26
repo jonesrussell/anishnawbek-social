@@ -5,7 +5,7 @@ dependencies:
   module:
     - image_effects
 _core:
-  default_config_hash: hwRrbLJEH3rFypPW8XnswA7U-o5V2T4uq7H-O0gW3aM
+  default_config_hash: OMOIkQqY8F2p9I6chZU18LsIWNdBt8wtFtY0RuYyFmY
 name: crop_thumbnail
 label: 'Crop thumbnail'
 effects:

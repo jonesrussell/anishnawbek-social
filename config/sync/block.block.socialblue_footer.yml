@@ -8,6 +8,8 @@ dependencies:
     - system
   theme:
     - socialblue
+_core:
+  default_config_hash: 7asZviSzAATgkU2DK59oGgKCp_vT02_OfndEBaVTGdk
 id: socialblue_footer
 theme: socialblue
 region: footer

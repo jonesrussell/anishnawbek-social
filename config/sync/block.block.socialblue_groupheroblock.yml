@@ -7,6 +7,8 @@ dependencies:
     - system
   theme:
     - socialblue
+_core:
+  default_config_hash: f6Ksf9342jZNofFmN2HRAElWXSHUQ_80JIBipOam4rM
 id: socialblue_groupheroblock
 theme: socialblue
 region: hero

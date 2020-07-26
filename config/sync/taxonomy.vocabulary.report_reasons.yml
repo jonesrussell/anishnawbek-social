@@ -1,0 +1,13 @@
+uuid: a14fc1f0-2b1b-4c61-93b8-a3572bda01fc
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - social_content_report
+_core:
+  default_config_hash: HCNu4TKVy0-WryExptJkshA4SWyhvaBDqTWJnCbrwbg
+name: 'Report reasons'
+vid: report_reasons
+description: 'A list of reasons users can choose from for reporting content.'
+weight: 0
