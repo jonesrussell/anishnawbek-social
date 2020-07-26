@@ -12,7 +12,6 @@ docker-compose.override.yml
 
 # Composer files #
 ##################
-composer.lock
 vendor
 html
 files_private
