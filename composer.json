@@ -18,6 +18,7 @@
     "drupal/flysystem": "^1.0",
     "drupal/flysystem_s3": "^1.0",
     "drupal/jsonapi_extras": "^3.14",
+    "drupal/module_filter": "^3.1",
     "drupal/oauth2_server": "^1.0",
     "drupal/rdfui": "^1.0",
     "drupal/redis": "^1.2",
