@@ -12,6 +12,7 @@
     "cweagans/composer-patches": "^1.0",
     "drupal-composer/drupal-scaffold": "^2.6.1",
     "drupal/admin_toolbar_search": "^1.0",
+    "drupal/adminimal_admin_toolbar": "^1.11",
     "drupal/adminimal_theme": "^1.5",
     "drupal/backup_migrate": "^4.1",
     "drupal/checklistapi": "^2.0",
